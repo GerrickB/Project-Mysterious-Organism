@@ -29,6 +29,8 @@ const pAequorFactory = (num, arrDna) => {
         
       }
       console.log(`${newBase} is the new base`);
+      this.dna[randIndex] = newBase;
+      return this.dna;
     }
   }
 };

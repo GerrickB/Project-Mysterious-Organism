@@ -45,7 +45,8 @@ const pAequorFactory = (num, arrDna) => {
 const firstOrganism = pAequorFactory(1, mockUpStrand());
 console.log(firstOrganism.dna);
 //console.log(firstOrganism.mutate());
-const secondOrganism = pAequorFactory(1, mockUpStrand());
+const secondOrganism = pAequorFactory(2, mockUpStrand());
+const thirdOrganism = pAequorFactory(3, mockUpStrand());
 console.log(secondOrganism.dna);
 firstOrganism.compareDNA(secondOrganism);
 

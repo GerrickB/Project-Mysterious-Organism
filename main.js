@@ -31,11 +31,21 @@ const pAequorFactory = (num, arrDna) => {
       console.log(`${newBase} is the new base`);
       this.dna[randIndex] = newBase;
       return this.dna;
+    },
+    compareDNA(pAequorObj) {
+      for (let i = 0; i < this.dna.length; i++) {
+        if (this.dna[i] === pAequorObj.dna[i]) {
+          console.log(`Bases are identical in this index ${i} `);
+        }
+      }
     }
   }
 };
 
-const randOrganism = pAequorFactory(1, mockUpStrand());
-console.log(randOrganism.dna);
-console.log(randOrganism.mutate());
+const firstOrganism = pAequorFactory(1, mockUpStrand());
+console.log(firstOrganism.dna);
+//console.log(firstOrganism.mutate());
+const secondOrganism = pAequorFactory(1, mockUpStrand());
+console.log(secondOrganism.dna);
+firstOrganism.compareDNA(secondOrganism);
 
